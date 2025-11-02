@@ -132,15 +132,13 @@ order = Order(<span class="hljs-string">&quot;A123&quot;</span>, [p1, p2])
 <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Mouse&quot;</span> <span class="hljs-keyword">in</span> order)
 </code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="11" data-marpit-fragments="3" data-paginate="true" data-class="lead" data-theme="default" lang="en-US" class="lead" data-marpit-pagination="11" style="--paginate:true;--class:lead;--theme:default;" data-marpit-pagination-total="27">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="11" data-paginate="true" data-class="lead" data-theme="default" lang="en-US" class="lead" data-marpit-pagination="11" style="--paginate:true;--class:lead;--theme:default;" data-marpit-pagination-total="27">
 <h3 id="exercice-2-%E2%80%93-repr%C3%A9sentation"><strong>Exercice 2 – Représentation</strong></h3>
 <blockquote>
 <p>Créer une classe <code>Invoice</code> avec :</p>
-<ul>
-<li data-marpit-fragment="1">un identifiant et une liste de montants,</li>
-<li data-marpit-fragment="2"><code>__len__()</code> → nombre d'articles,</li>
-<li data-marpit-fragment="3"><code>__str__()</code> → affichage formaté du total.</li>
-</ul>
+<p>un identifiant et une liste de montants,<br />
+<code>__len__()</code> → nombre d'articles,<br />
+<code>__str__()</code> → affichage formaté du total.</p>
 </blockquote>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="12" data-paginate="true" data-class="lead" data-theme="default" lang="en-US" class="lead" data-marpit-pagination="12" style="--paginate:true;--class:lead;--theme:default;" data-marpit-pagination-total="27">
@@ -198,14 +196,12 @@ u2 = ManagerUser(<span class="hljs-string">&quot;Bob&quot;</span>, <span class="
 Bob (b@ex.com) : ['read', 'approve']
 </code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="17" data-marpit-fragments="2" data-paginate="true" data-class="lead" data-theme="default" lang="en-US" class="lead" data-marpit-pagination="17" style="--paginate:true;--class:lead;--theme:default;" data-marpit-pagination-total="27">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="17" data-paginate="true" data-class="lead" data-theme="default" lang="en-US" class="lead" data-marpit-pagination="17" style="--paginate:true;--class:lead;--theme:default;" data-marpit-pagination-total="27">
 <h3 id="exercice-3-%E2%80%93-h%C3%A9ritage-avec-super-version-simplifi%C3%A9e"><strong>Exercice 3 – Héritage avec <code>super()</code> (version simplifiée)</strong></h3>
 <blockquote>
 <p>Créez deux classes :</p>
-<ul>
-<li data-marpit-fragment="1"><code>Vehicle</code> : contient un attribut <code>brand</code> et une méthode <code>describe()</code> qui affiche <code>&quot;Vehicle brand: &lt;brand&gt;&quot;</code>.</li>
-<li data-marpit-fragment="2"><code>Car</code> : hérite de <code>Vehicle</code>, ajoute un attribut <code>model</code>, et redéfinit <code>describe()</code> en appelant <code>super().describe()</code> puis en affichant aussi le modèle.</li>
-</ul>
+<p><code>Vehicle</code> : contient un attribut <code>brand</code> et une méthode <code>describe()</code> qui affiche <code>&quot;Vehicle brand: &lt;brand&gt;&quot;</code>.<br />
+<code>Car</code> : hérite de <code>Vehicle</code>, ajoute un attribut <code>model</code>, et redéfinit <code>describe()</code> en appelant <code>super().describe()</code> puis en affichant aussi le modèle.</p>
 </blockquote>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="18" data-paginate="true" data-class="lead" data-theme="default" lang="en-US" class="lead" data-marpit-pagination="18" style="--paginate:true;--class:lead;--theme:default;" data-marpit-pagination-total="27">
@@ -242,27 +238,23 @@ make_it_speak(cat)
 Meow!
 </code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="20" data-marpit-fragments="2" data-paginate="true" data-class="lead" data-theme="default" lang="en-US" class="lead" data-marpit-pagination="20" style="--paginate:true;--class:lead;--theme:default;" data-marpit-pagination-total="27">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="20" data-paginate="true" data-class="lead" data-theme="default" lang="en-US" class="lead" data-marpit-pagination="20" style="--paginate:true;--class:lead;--theme:default;" data-marpit-pagination-total="27">
 <h3 id="exercice-4-%E2%80%93-polymorphisme"><strong>Exercice 4 – Polymorphisme</strong></h3>
 <blockquote>
 <p>Créez deux classes :</p>
-<ul>
-<li data-marpit-fragment="1"><code>Car</code> avec une méthode <code>start()</code> affichant <code>&quot;The car engine starts.&quot;</code></li>
-<li data-marpit-fragment="2"><code>Bicycle</code> avec une méthode <code>start()</code> affichant <code>&quot;You start pedaling.&quot;</code></li>
-</ul>
+<p><code>Car</code> avec une méthode <code>start()</code> affichant <code>&quot;The car engine starts.&quot;</code><br />
+<code>Bicycle</code> avec une méthode <code>start()</code> affichant <code>&quot;You start pedaling.&quot;</code></p>
 <p>Puis écrivez une fonction <code>start_vehicle(vehicle)</code> qui appelle <code>vehicle.start()</code>.<br />
 Testez la fonction avec une voiture et un vélo.</p>
 </blockquote>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="21" data-marpit-fragments="2" data-paginate="true" data-class="lead" data-theme="default" lang="en-US" class="lead" data-marpit-pagination="21" style="--paginate:true;--class:lead;--theme:default;" data-marpit-pagination-total="27">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="21" data-paginate="true" data-class="lead" data-theme="default" lang="en-US" class="lead" data-marpit-pagination="21" style="--paginate:true;--class:lead;--theme:default;" data-marpit-pagination-total="27">
 <h2 id="5-encapsulation-et-coh%C3%A9rence-interne"><strong>5. Encapsulation et cohérence interne</strong></h2>
 <blockquote>
 <p>L'encapsulation permet de <strong>protéger les données internes</strong> et de <strong>maintenir la cohérence métier</strong>.<br />
 Python ne possède pas de vrais attributs privés, mais on peut utiliser :</p>
-<ul>
-<li data-marpit-fragment="1">la <strong>convention</strong> <code>_attribut</code> ou <code>__attribut</code>,</li>
-<li data-marpit-fragment="2">le <strong>décorateur <code>@property</code></strong> pour contrôler lecture et écriture.</li>
-</ul>
+<p>la <strong>convention</strong> <code>_attribut</code> ou <code>__attribut</code>,<br />
+le <strong>décorateur <code>@property</code></strong> pour contrôler lecture et écriture.</p>
 </blockquote>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="22" data-paginate="true" data-class="lead" data-theme="default" lang="en-US" class="lead" data-marpit-pagination="22" style="--paginate:true;--class:lead;--theme:default;" data-marpit-pagination-total="27">

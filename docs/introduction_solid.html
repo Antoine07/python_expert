@@ -77,7 +77,7 @@ Si tu dois la changer pour une raison, tu risques d'en casser une autre.</p>
         <span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;<span class="hljs-subst">{filename}</span> saved.&quot;</span>)
 </code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7" data-marpit-fragments="2" data-paginate="true" data-class="lead" data-theme="default" lang="en-US" class="lead" data-marpit-pagination="7" style="--paginate:true;--class:lead;--theme:default;" data-marpit-pagination-total="14">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7" data-paginate="true" data-class="lead" data-theme="default" lang="en-US" class="lead" data-marpit-pagination="7" style="--paginate:true;--class:lead;--theme:default;" data-marpit-pagination-total="14">
 <p>Usage des classes SPR</p>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-python">report = Report(<span class="hljs-string">&quot;Weekly Report&quot;</span>, <span class="hljs-string">&quot;Everything is working fine.&quot;</span>)
 text = report.generate()
@@ -86,10 +86,8 @@ saver = FileSaver()
 saver.save(text, <span class="hljs-string">&quot;report.txt&quot;</span>)
 </code></pre>
 <p>On a maintenant deux classes, chacune avec <strong>une seule responsabilité</strong> :</p>
-<ul>
-<li data-marpit-fragment="1"><code>Report</code> : crée le texte du rapport</li>
-<li data-marpit-fragment="2"><code>FileSaver</code> : gère la sauvegarde</li>
-</ul>
+<p><code>Report</code> : crée le texte du rapport<br />
+<code>FileSaver</code> : gère la sauvegarde</p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="8" data-paginate="true" data-class="lead" data-theme="default" lang="en-US" class="lead" data-marpit-pagination="8" style="--paginate:true;--class:lead;--theme:default;" data-marpit-pagination-total="14">
 <h3 id="exercice-1-%E2%80%93-classe-trop-lourde"><strong>Exercice 1 – Classe trop lourde</strong></h3>
@@ -125,20 +123,16 @@ la logique de validation,<br />
 la manière d'afficher.</p>
 </blockquote>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="10" data-marpit-fragments="5" data-paginate="true" data-class="lead" data-theme="default" lang="en-US" class="lead" data-marpit-pagination="10" style="--paginate:true;--class:lead;--theme:default;" data-marpit-pagination-total="14">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="10" data-paginate="true" data-class="lead" data-theme="default" lang="en-US" class="lead" data-marpit-pagination="10" style="--paginate:true;--class:lead;--theme:default;" data-marpit-pagination-total="14">
 <h2 id="4-conclusion"><strong>4. Conclusion</strong></h2>
 <p>Le <strong>Single Responsibility Principle</strong> est le fondement des autres principes SOLID.<br />
 En Python, il consiste à :</p>
-<ul>
-<li data-marpit-fragment="1">donner à chaque classe <strong>une seule responsabilité claire</strong>,</li>
-<li data-marpit-fragment="2">séparer la <strong>logique métier</strong> de la <strong>présentation</strong> ou de la <strong>persistance</strong>,</li>
-<li data-marpit-fragment="3">réduire le couplage entre les parties du code.</li>
-</ul>
+<p>donner à chaque classe <strong>une seule responsabilité claire</strong>,<br />
+séparer la <strong>logique métier</strong> de la <strong>présentation</strong> ou de la <strong>persistance</strong>,<br />
+réduire le couplage entre les parties du code.</p>
 <p>Une fois ce principe acquis, les étudiants peuvent aborder :</p>
-<ul>
-<li data-marpit-fragment="4"><strong>O (Open/Closed)</strong> pour apprendre à étendre sans modifier,</li>
-<li data-marpit-fragment="5">puis plus tard, <strong>L</strong>, <strong>I</strong>, <strong>D</strong> pour des architectures plus souples.</li>
-</ul>
+<p><strong>O (Open/Closed)</strong> pour apprendre à étendre sans modifier,<br />
+puis plus tard, <strong>L</strong>, <strong>I</strong>, <strong>D</strong> pour des architectures plus souples.</p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="11" data-paginate="true" data-class="lead" data-theme="default" lang="en-US" class="lead" data-marpit-pagination="11" style="--paginate:true;--class:lead;--theme:default;" data-marpit-pagination-total="14">
 <h2 id="tp-%E2%80%93-application-du-srp--gestion-dun-panier-dachat"><strong>TP – Application du SRP : gestion d'un panier d'achat</strong></h2>

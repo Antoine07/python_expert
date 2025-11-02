@@ -138,9 +138,9 @@ print("Mouse" in order)
 
 > Créer une classe `Invoice` avec :
 >
-> * un identifiant et une liste de montants,
-> * `__len__()` → nombre d'articles,
-> * `__str__()` → affichage formaté du total.
+> un identifiant et une liste de montants,
+> `__len__()` → nombre d'articles,
+> `__str__()` → affichage formaté du total.
 
 ---
 
@@ -217,8 +217,8 @@ Bob (b@ex.com) : ['read', 'approve']
 
 > Créez deux classes :
 >
-> * `Vehicle` : contient un attribut `brand` et une méthode `describe()` qui affiche `"Vehicle brand: <brand>"`.
-> * `Car` : hérite de `Vehicle`, ajoute un attribut `model`, et redéfinit `describe()` en appelant `super().describe()` puis en affichant aussi le modèle.
+> `Vehicle` : contient un attribut `brand` et une méthode `describe()` qui affiche `"Vehicle brand: <brand>"`.
+> `Car` : hérite de `Vehicle`, ajoute un attribut `model`, et redéfinit `describe()` en appelant `super().describe()` puis en affichant aussi le modèle.
 
 ---
 
@@ -270,8 +270,8 @@ Meow!
 
 > Créez deux classes :
 >
-> * `Car` avec une méthode `start()` affichant `"The car engine starts."`
-> * `Bicycle` avec une méthode `start()` affichant `"You start pedaling."`
+> `Car` avec une méthode `start()` affichant `"The car engine starts."`
+> `Bicycle` avec une méthode `start()` affichant `"You start pedaling."`
 >
 > Puis écrivez une fonction `start_vehicle(vehicle)` qui appelle `vehicle.start()`.
 > Testez la fonction avec une voiture et un vélo.
@@ -283,8 +283,8 @@ Meow!
 > L'encapsulation permet de **protéger les données internes** et de **maintenir la cohérence métier**.
 > Python ne possède pas de vrais attributs privés, mais on peut utiliser :
 >
-> * la **convention** `_attribut` ou `__attribut`,
-> * le **décorateur `@property`** pour contrôler lecture et écriture.
+> la **convention** `_attribut` ou `__attribut`,
+> le **décorateur `@property`** pour contrôler lecture et écriture.
 
 ---
 

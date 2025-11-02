@@ -1,6 +1,5 @@
 # Plan de cours
 
-
 ## Python Expert
 
 ### Chapitre 1 - Expressivité et idiomes Python
@@ -11,6 +10,11 @@
 
 ### Chapitre 3 – Introduction à SOLID : la responsabilité unique
 - [SOLID "S"](https://antoine07.github.io/python_expert/solid.html)
+
+
+*Page suivante pour l'installation*
+
+---
 
 
 ### Installation 

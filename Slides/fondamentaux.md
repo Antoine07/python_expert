@@ -29,13 +29,13 @@ Il existe une liste complète de règles, mais nous introduisons ici les plus im
 
 **Principes essentiels :**
 
-* **Indentation** : 4 espaces (pas de tabulations — la touche *Tab* dans vos éditeurs insère généralement 4 espaces)
-* **Noms** :
+**Indentation** : 4 espaces (pas de tabulations — la touche *Tab* dans vos éditeurs insère généralement 4 espaces)
+**Noms** :
 
-  * variables et fonctions → `snake_case`
-  * classes → `PascalCase`
-* **Espaces** : autour des opérateurs et après les virgules.
-* **Lisibilité** : une ligne = une action.
+  variables et fonctions → `snake_case`
+  classes → `PascalCase`
+**Espaces** : autour des opérateurs et après les virgules.
+**Lisibilité** : une ligne = une action.
 
 ---
 
@@ -101,8 +101,8 @@ Ces deux exemples remplacent des boucles plus longues et restent compréhensible
 
 > À partir de la liste `notes = [10, 15, 8, 18, 13]`, créez :
 >
-> * une liste des notes >= 12,
-> * une liste des notes doublées.
+> une liste des notes >= 12,
+> une liste des notes doublées.
 
 ---
 
@@ -179,8 +179,8 @@ with open("data.txt") as f:
 > Créez un fichier `words.txt` contenant une dizaine de mots.
 > Écrivez un programme qui affiche :
 >
-> * le nombre total de lignes,
-> * le mot le plus long.
+> le nombre total de lignes,
+> le mot le plus long.
 
 ---
 
@@ -233,9 +233,9 @@ print(cleaned)
 
 > Écrivez une fonction `clean_numbers(lines)` qui :
 >
-> * prend une liste de chaînes (ex : valeurs lues dans un fichier),
-> * ignore les lignes vides ou non numériques,
-> * renvoie une liste de `float`.
+> prend une liste de chaînes (ex : valeurs lues dans un fichier),
+> ignore les lignes vides ou non numériques,
+> renvoie une liste de `float`.
 
 **Indice :**
 
@@ -259,9 +259,9 @@ min_val, max_val = min(values), max(values)
 
 > À partir d'une liste `heights = [170, 180, 165, 190]`, affichez :
 >
-> * la moyenne,
-> * la taille la plus petite et la plus grande,
-> * le nombre de personnes au-dessus de la moyenne.
+> la moyenne,
+> la taille la plus petite et la plus grande,
+> le nombre de personnes au-dessus de la moyenne.
 
 ---
 
@@ -302,9 +302,9 @@ else:
 
 > Écrivez une fonction `read_numbers(filename)` qui :
 >
-> * lit un fichier contenant un nombre par ligne,
-> * ignore les lignes vides ou non valides,
-> * renvoie une liste de nombres valides.
+> lit un fichier contenant un nombre par ligne,
+> ignore les lignes vides ou non valides,
+> renvoie une liste de nombres valides.
 
 ---
 

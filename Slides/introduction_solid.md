@@ -103,8 +103,8 @@ saver.save(text, "report.txt")
 
 On a maintenant deux classes, chacune avec **une seule responsabilité** :
 
-* `Report` : crée le texte du rapport
-* `FileSaver` : gère la sauvegarde
+`Report` : crée le texte du rapport
+`FileSaver` : gère la sauvegarde
 
 ---
 
@@ -152,14 +152,14 @@ L'autre gère **l'écriture dans un fichier**.
 Le **Single Responsibility Principle** est le fondement des autres principes SOLID.
 En Python, il consiste à :
 
-* donner à chaque classe **une seule responsabilité claire**,
-* séparer la **logique métier** de la **présentation** ou de la **persistance**,
-* réduire le couplage entre les parties du code.
+donner à chaque classe **une seule responsabilité claire**,
+séparer la **logique métier** de la **présentation** ou de la **persistance**,
+réduire le couplage entre les parties du code.
 
 Une fois ce principe acquis, les étudiants peuvent aborder :
 
-* **O (Open/Closed)** pour apprendre à étendre sans modifier,
-* puis plus tard, **L**, **I**, **D** pour des architectures plus souples.
+**O (Open/Closed)** pour apprendre à étendre sans modifier,
+puis plus tard, **L**, **I**, **D** pour des architectures plus souples.
 
 ---
 
