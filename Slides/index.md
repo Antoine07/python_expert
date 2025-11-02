@@ -9,7 +9,7 @@
 - [POO](https://antoine07.github.io/python_expert/poo.html)
 
 ### Chapitre 3 – Introduction à SOLID : la responsabilité unique
-- [SOLID "S"](https://antoine07.github.io/python_expert/solid.html)
+- [SOLID "S"](https://antoine07.github.io/python_expert/introduction_solid.html)
 
 
 *Page suivante pour l'installation*
