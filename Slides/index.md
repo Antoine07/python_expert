@@ -1,6 +1,6 @@
 # Plan de cours
 
-## Python Expert
+## Python Advanced
 
 ### Chapitre 1 - Expressivité et idiomes Python
 - [Introduction](https://antoine07.github.io/python_expert/fondamentaux.html)
