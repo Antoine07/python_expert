@@ -137,7 +137,6 @@ print("Mouse" in order)
 ### **Exercice 2 – Représentation**
 
 > Créer une classe `Invoice` avec :
->
 > un identifiant et une liste de montants,
 > `__len__()` → nombre d'articles,
 > `__str__()` → affichage formaté du total.
@@ -216,7 +215,6 @@ Bob (b@ex.com) : ['read', 'approve']
 ### **Exercice 3 – Héritage avec `super()` (version simplifiée)**
 
 > Créez deux classes :
->
 > `Vehicle` : contient un attribut `brand` et une méthode `describe()` qui affiche `"Vehicle brand: <brand>"`.
 > `Car` : hérite de `Vehicle`, ajoute un attribut `model`, et redéfinit `describe()` en appelant `super().describe()` puis en affichant aussi le modèle.
 
@@ -226,7 +224,6 @@ Bob (b@ex.com) : ['read', 'approve']
 
 > Le **polymorphisme** permet d'utiliser **différentes classes de la même façon**,
 > du moment qu'elles offrent **la même méthode**.
->
 > En Python, on parle de **duck typing** :
 > "si un objet sait faire ce qu'on lui demande, peu importe sa classe."
 

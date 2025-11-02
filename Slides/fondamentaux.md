@@ -100,9 +100,8 @@ Ces deux exemples remplacent des boucles plus longues et restent compréhensible
 **Exercice 2 – Filtrage simple**
 
 > À partir de la liste `notes = [10, 15, 8, 18, 13]`, créez :
->
-> une liste des notes >= 12,
-> une liste des notes doublées.
+> 1. une liste des notes >= 12.
+> 2. une liste des notes doublées.
 
 ---
 
@@ -178,9 +177,7 @@ with open("data.txt") as f:
 
 > Créez un fichier `words.txt` contenant une dizaine de mots.
 > Écrivez un programme qui affiche :
->
-> le nombre total de lignes,
-> le mot le plus long.
+> le nombre total de lignes, et le mot le plus long.
 
 ---
 
@@ -232,7 +229,6 @@ print(cleaned)
 ### **Exercice 7 – Nettoyage basique**
 
 > Écrivez une fonction `clean_numbers(lines)` qui :
->
 > prend une liste de chaînes (ex : valeurs lues dans un fichier),
 > ignore les lignes vides ou non numériques,
 > renvoie une liste de `float`.
@@ -258,7 +254,6 @@ min_val, max_val = min(values), max(values)
 **Exercice 8 – Analyse express**
 
 > À partir d'une liste `heights = [170, 180, 165, 190]`, affichez :
->
 > la moyenne,
 > la taille la plus petite et la plus grande,
 > le nombre de personnes au-dessus de la moyenne.
@@ -301,7 +296,6 @@ else:
 ### **Exercice 9 – Lecture sûre**
 
 > Écrivez une fonction `read_numbers(filename)` qui :
->
 > lit un fichier contenant un nombre par ligne,
 > ignore les lignes vides ou non valides,
 > renvoie une liste de nombres valides.
@@ -353,7 +347,7 @@ except ValueError:
 
 **Exercice 1 – Conversion sûre**
 
-> Demandez un nombre à l'utilisateur et affichez son carré.
+> Passez un nombre à votre fonction et affichez son carré.
 > Si la saisie est invalide, affichez un message.
 
 ---
@@ -450,10 +444,9 @@ Objectif du TP : combiner tout ce qui a été appris. page 1/2
 1. Lire un fichier `temperatures_january.txt` (31 jours).
 2. Nettoyer les valeurs incorrectes.
 3. Calculer :
-
-   * la moyenne, le min et le max,
-   * le nombre de jours sous 0°C,
-   * le nombre de jours au-dessus de la moyenne.
+la moyenne, le min et le max,
+le nombre de jours sous 0°C,
+le nombre de jours au-dessus de la moyenne.
 4. Produire un résumé à l'écran puis dans un fichier texte.
 
 ---

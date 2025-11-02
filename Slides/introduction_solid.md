@@ -138,9 +138,7 @@ L'autre gère **l'écriture dans un fichier**.
 > Crée une classe `User` avec `name`, `email`.
 > Ajoute une validation dans une autre classe (`UserValidator`)
 > et une classe `UserPrinter` pour afficher les infos.
->
 > Chaque classe doit avoir **une seule raison de changer** :
->
 > la structure de l'objet,
 > la logique de validation,
 > la manière d'afficher.
