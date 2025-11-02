@@ -1,0 +1,13 @@
+Corrections/Notebooks
+# Corrections/Notebooks/poo.ipynb
+# Corrections/Notebooks/solid.ipynb
+*.pyc
+.ipynb_checkpoints
+__pycache__
+env_work/
+
+node_modules/
+
+.vscode/
+.DS_Store
+*.log
