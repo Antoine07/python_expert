@@ -69,7 +69,7 @@ Cela signifie que l'environnement virtuel est **actif**.
 Quand l'environnement est actif, vous pouvez installer des modules sans affecter le reste du système :
 
 ```bash
-pip install numpy pandas matplotlib
+pip install jupyter lab notebook
 ```
 
 Vous pouvez aussi vérifier les paquets installés :
