@@ -6,3 +6,16 @@ def addNumbers(a, b):
 nums=[1, 2, 3]
 for n in nums:
     print(addNumbers(n, n))
+    
+res = []
+for number in numbers:
+    # print(number**2)
+    res.append(number**2)
+
+print(res)
+
+res = [ number**2 for number in numbers ]
+print(res)
+
+res = [ number**2 for number in numbers if number % 2 == 0 ]
+print(res)
