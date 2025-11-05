@@ -28,6 +28,6 @@ players = [
 ]
 
 estima_players = Team("ESTIAM", players)
-estima_players.add_player(Player("Chris", 60))
+estima_players.add_player(Player("Chris", 60)) # création à la voler d'objet 
 
 print( estima_players.total_score() )
