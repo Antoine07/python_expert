@@ -28,9 +28,10 @@ estiam_paris_lyon_e2.addStudent(petinia)
 # Afficher la liste des étudiants avec leurs noms
 print(estiam_paris_lyon_e2.students)
 
+# Une méthode pour parcourir 
 for i in range(len(estiam_paris_lyon_e2.students)):
     print(estiam_paris_lyon_e2.students[i].name)
     
-# on récupère l'ensemble des students dans la liste ce sont des objets Student
+# Une autre méthode plus simple pour parcourir
 for student in estiam_paris_lyon_e2.students:
     print(student.name) # affiche leur nom (attribut name dans la classe Student)
