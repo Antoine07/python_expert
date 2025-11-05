@@ -143,13 +143,23 @@ print("Mouse" in order)
 
 ---
 
----
-
 ## TP Crypto 
 
-Récupérez le TP à l’adresse suivante et faites-le par équipes de deux maximum.
+Récupérez le TP à l'adresse suivante et faites-le par équipes de deux maximum.
 
-[crypto](https://github.com/Antoine07/python_expert/TP_crypto.html)
+[crypto](https://antoine07.github.io/python_expert/TP_crypto.html)
+
+---
+
+## Exercice Bank
+
+Simuler un dépôt d'argent sur un compte à travers une classe Bank qui appelle une méthode de Account.
+
+---
+
+## Exercice Panier & Boutique
+
+Simuler l'ajout d'un article dans un panier à travers une classe Shop qui appelle une méthode de Cart.
 
 ---
 
@@ -222,11 +232,21 @@ Bob (b@ex.com) : ['read', 'approve']
 
 ---
 
-### **Exercice 3 – Héritage avec `super()` (version simplifiée)**
+### **Exercice – Héritage avec `super()`**
 
 > Créez deux classes :
-> `Vehicle` : contient un attribut `brand` et une méthode `describe()` qui affiche `"Vehicle brand: <brand>"`.
+> `Vehicle` : contient un attribut `brand` et une méthode `describe()` qui affiche `"Vehicle brand: Renault"`.
 > `Car` : hérite de `Vehicle`, ajoute un attribut `model`, et redéfinit `describe()` en appelant `super().describe()` puis en affichant aussi le modèle.
+
+---
+
+### **Exercice – Héritage avec super()**
+
+Créez deux classes :
+
+Person : contient un attribut name et une méthode introduce() qui affiche "Hello, my name is <name>".
+
+Student : hérite de Person, ajoute un attribut school, et redéfinit introduce() en appelant super().introduce() puis en affichant aussi "I study at <school>".
 
 ---
 
