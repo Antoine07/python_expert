@@ -5,20 +5,31 @@
 # un autre fichier comme suit from le_fichier_sans_extention import ta_class, ta_fonction
 from Wallet import Wallet
 from Order import Order
+from prices import PRICES
 
-prices = {}  # on commence avec un portefeuille vide
+
+# on commence avec un portefeuille vide
 
 # Création du portefeuille de départ
-wallet = Wallet(prices)
+wallet = Wallet(PRICES)
+print(wallet.prices)
+print("-------")
+wallet.add_price("BTC", 65_000)
+wallet.add_price("DOGE", 0.12)
+print(wallet.prices)
+print("-------")
+# wallet.remove_price("BTC")
+print(wallet.prices)
+
+# Gestion de nos cryptos
 
 # Création d'un gestionnaire d'achat
 order = Order(wallet)
 
 # Achats simulés
-order.buy("BTC", 65000, 0.01)
-order.buy("ETH", 3500, 0.2)
-order.buy("DOGE", 0.12, 50)
+order.buy("BTC", 0.001)
+order.buy("DOGE", 200)
 
-# Affichage du portefeuille final
-print()
+# # Affichage du portefeuille final
+# print()
 print(wallet)
