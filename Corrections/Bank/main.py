@@ -16,8 +16,8 @@ bankPostal = Bank("Banque Postale")
 try:
     bankPostal.set_account(accountAlan)
     bankPostal.set_account(accountAlan)  # Compte déjà existant
-except Exception as e:
-    print(e)
+except Exception as e: # alias pour récupérer le message d'erreur 
+    print(e) # permet d'afficher le message de l'exception
 
 # Ajout d'Alice
 try:
