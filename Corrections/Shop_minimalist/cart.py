@@ -1,11 +1,15 @@
 class Cart:
     def __init__(self, name):
-        self.items = {}  # {product: quantité}
+        self.products = {}  # {product: quantité}
         self.name = name
 
     def buy(self, product, quantity):
-       pass
-
+        total = product.price * quantity
+        if product.name in self.products:
+            self.products[product.name] += total 
+            return
+        
+        self.products[product.name] = total 
+           
     def total(self):
-        pass
-        # Total du prix du panier
+        return sum( self.products.values())
