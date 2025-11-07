@@ -146,4 +146,4 @@ Coordonne toutes les catégories.
 
 ---
 
-## Bon courage les parisien et les lyonnais
+## Bon courage les parisiens et les lyonnais

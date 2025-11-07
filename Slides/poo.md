@@ -240,6 +240,23 @@ Laisser les classes **lever** des exceptions, gérer les erreurs **à l'extérie
 
 ---
 
+## Principe de l'héritage 
+
+Si vous pouvez dire qu'une classe fille est un ou une sorte de par rapport à sa classe parente, alors c'est bien de l'héritage.
+
+1. Si vous avez une classe qui s'appelle `Animal` et une classe fille `Chat`, un chat est une sorte d'animal.
+1. Une classe `Model` (pour vos données) une classe `User` ou `Category` est un `Model` spécialisé. 
+
+---
+
+## Schéma diagramme classe
+
+Héritage la classe `OnLineBank` est une sorte de `Bank` (classe)
+
+<img src="./images/heritage.png" width="500" />
+
+--- 
+
 ### **Exemple : utilisateurs avec rôles**
 
 ```python
