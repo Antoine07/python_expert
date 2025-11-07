@@ -4,7 +4,13 @@
 
 ## **Contraintes**
 
+1. Appliquer le principe **SRP** (Single Responsibility Principle).
+2. Travail en binôme au maximum.
+3. Nettoyer les données en choisissant les **méthodes les plus adaptées et efficaces**.
+4. Développer en **POO**, avec un **couplage faible** (pas d’instances internes non nécessaires).
+5. Respecter **PEP8** ainsi que les bonnes pratiques de **refactoring**.
 
+---
 
 ## **Contexte**
 
@@ -140,7 +146,4 @@ Coordonne toutes les catégories.
 
 ---
 
-Si vous le souhaitez, je peux maintenant :
-
-* Générer un **énoncé PDF prêt à imprimer**,
-* Ou fournir un **corrigé structuré étape par étape**.
+## Bon courage les parisien et les lyonnais
