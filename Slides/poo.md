@@ -157,9 +157,79 @@ Simuler un dépôt d'argent sur un compte à travers une classe Bank qui appelle
 
 ---
 
+---
+
 ## Exercice Panier & Boutique
 
 Simuler l'ajout d'un article dans un panier à travers une classe Shop qui appelle une méthode de Cart.
+
+---
+
+## 1. Bilan point sur la pratique des exceptions 1/2
+
+```python
+# Dans la classe
+def withdraw(self, amount):
+    if amount > self.balance:
+        raise ValueError("Solde insuffisant")
+    self.balance -= amount
+
+# À l'extérieur (ex : simulation)
+try:
+    account.withdraw(500)
+except ValueError as e:
+    print("Erreur :", e)
+```
+
+---
+
+## 2. Bilan sur le couplage
+
+```python
+class Shop:
+    def __init__(self):
+        self.cart = Cart()   # ← création interne → couplage fort
+
+class Shop:
+    def __init__(self, cart):
+        self.cart = cart
+
+cart = Cart()
+shop = Shop(cart)
+```
+
+---
+
+### Couplage faible
+
+Une classe ne doit pas connaître les détails internes d'une autre classe.
+
+**Mauvais** :
+
+shop.cart.items["banane"] = 3    # Accès interne direct
+
+
+**Bon** :
+
+shop.cart.add_product(banane, 3) # On passe par la méthode de la classe
+
+
+On utilise les méthodes, pas les attributs internes, c'est mieux.
+
+---
+
+## **Refactorisation – Rappel synthétique (1 slide)**
+
+**Objectif** : rendre le code plus clair, maintenable et extensible.
+**Principe** : modifier l'**organisation** du code sans changer le **comportement**.
+**Bonnes pratiques** :
+
+Extraire des méthodes trop longues → **fonctions plus petites et lisibles**
+Éviter **duplication** → centraliser la logique partagée
+Renommer pour **clarifier l'intention** (variables, méthodes, classes)
+**Injecter** les dépendances → éviter couplage fort
+Laisser les classes **lever** des exceptions, gérer les erreurs **à l'extérieur**
+**Résultat attendu** : code plus simple, stable, testable, évolutif.
 
 ---
 
@@ -240,13 +310,16 @@ Bob (b@ex.com) : ['read', 'approve']
 
 ---
 
-### **Exercice – Héritage avec super()**
+### Exercice – Produits, Livres et Panier (POO)
 
-Créez deux classes :
+Créer une classe `Product` avec `name` et `price_ht`, ainsi qu'un attribut de classe `VAT` (ex. 0.20). La méthode `price_ttc()` calcule le prix TTC.
 
-Person : contient un attribut name et une méthode introduce() qui affiche "Hello, my name is <name>".
+Créer une classe `Book` qui hérite de `Product`, ajoute `author`, possède son propre taux de TVA (attribut de classe `VAT` différent) et redéfinit `price_ttc()`. Utiliser `super()` dans le constructeur.
 
-Student : hérite de Person, ajoute un attribut school, et redéfinit introduce() en appelant super().introduce() puis en affichant aussi "I study at <school>".
+Créer une classe `Cart` contenant une liste `items`. Elle doit permettre `buy(product)`, `restore(product)`, `reset()` et `total()` qui renvoie le total TTC du panier. Le panier ne doit pas créer de produits, seulement recevoir ceux créés à l'extérieur.
+
+Dans le programme principal : créer au moins deux `Product` et deux `Book`, les ajouter au panier, afficher le total, modifier les valeurs de `Product.VAT` ou `Book.VAT`, puis afficher à nouveau le total pour observer l'effet.
+
 
 ---
 
@@ -309,62 +382,78 @@ p.price = -10  # déclenche une erreur
 
 ---
 
-## **6. TP – Gestion de commandes**
+### **Polymorphisme : définition**
 
-> Objectif : modéliser un petit système de commandes en ligne.
-> (Encapsulation facultative)
-
----
-
-### Fonctionnalités page 1/2
-
-1. **`Product`**
-
-   * Attributs : `name`, `price`
-   * Méthode `__str__()` : affiche le nom et le prix
-
-2. **`Customer`**
-
-   * Attributs : `name`, `email`
-   * Méthode `__str__()` : affiche les informations du client
+Le polymorphisme est la capacité pour plusieurs objets différents de répondre à une même méthode, mais chacun à sa manière.
+On s'adresse à l'objet **par son comportement**, pas par son type.
+Autrement dit : *« On sait que l'objet sait faire, mais pas comment il le fait. »*
+Cela permet d'écrire du code plus **générique**, **réutilisable** et **extensible**, sans conditions du type `if type == ...`.
 
 ---
 
-### Fonctionnalités page 2/2
-
-3. **`Order`**
-
-   * Attributs : `reference`, `customer`, `products` (liste vide)
-   * Méthodes :
-
-     * `add_product(product)`
-     * `total()`
-     * `__str__()`
-
----
-
-### **Exemple attendu**
+### **Exemple**
 
 ```python
-p1 = Product("Keyboard", 45)
-p2 = Product("Mouse", 25)
+class Product:
+    def price_ttc(self):
+        return self.price_ht * (1 + Product.VAT)
 
-c1 = Customer("Alice", "alice@example.com")
+class Book(Product):
+    def price_ttc(self):
+        return self.price_ht * (1 + Book.VAT)
 
-order = Order("CMD001", c1)
-order.add_product(p1)
-order.add_product(p2)
-
-print(order)
+class Cart:
+    def total(self):
+        return sum(item.price_ttc() for item in self.items)
 ```
 
+Ici `Cart` appelle `price_ttc()` sans connaître le type précis de l'objet.
+Si l'objet est un `Product` ou un `Book`, la méthode exécutée sera celle correspondante.
+C'est **le même appel**, mais **un comportement adapté** selon l'objet.
+
+---
+
+### **Intérêt**
+
+Permet d'ajouter de nouveaux types d'objets **sans modifier le code existant**.
+Le polymorphisme évite les tests de type, les duplications et les dépendances inutiles.
+Il rend le système plus souple : le code s'appuie sur **ce que l'objet sait faire**, pas sur **ce qu'il est**.
+C'est un principe majeur pour obtenir un code **maintenable**, **propre**, et **ouvert à l'évolution**.
+
+---
+
+### **Lien entre héritage et polymorphisme**
+
+L'héritage permet de **définir un comportement commun** dans une classe parent (ex : `Product`) et de le **spécialiser** dans les classes enfants (ex : `Book`).
+Le polymorphisme utilise cet héritage pour permettre **un même appel de méthode** à produire **différents comportements** selon l'objet.
+
+---
+
+### Exemple 1/2
+
+```python
+class Product:
+    def price_ttc(self):
+        return self.price_ht * (1 + Product.VAT)
+
+class Book(Product):           # Héritage
+    def price_ttc(self):       # Polymorphisme (surcharge)
+        return self.price_ht * (1 + Book.VAT)
 ```
-Order CMD001
-Customer: Alice (alice@example.com)
-Items: 2 - Total: 70€
+
+---
+
+### Exemple 2/2
+
+Quand le panier appelle :
+
+```python
+for item in cart.items:
+    total += item.price_ttc()
 ```
 
+Il **ne sait pas** s'il a un `Product` ou un `Book`.
+Mais **il sait** que chaque objet possède `price_ttc()`.
 
-## Merci de votre attention
-
-[Home](./index.html)
+**Héritage = structure commune.**
+**Polymorphisme = comportements adaptés.**
