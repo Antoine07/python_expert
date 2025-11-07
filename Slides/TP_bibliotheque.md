@@ -28,16 +28,16 @@ Les données proviendront d'un **fichier texte externe**.
 
 ---
 
-## **Fichier de données (à créer par vous)**
+## **Fichier de données**
 
-Nom du fichier : `books.csv`
+Nom du fichier : `book.csv`
 Format (séparateur `;`) :
 
 ```
 Catégorie ; Titre ; Auteur ; Année ; Disponible
 ```
 
-Exemple de ligne (l'étudiant doit en créer **au moins 25**) :
+Exemple de ligne :
 
 ```
 Roman;Le Rouge et le Noir;Stendhal;1830;yes
@@ -77,36 +77,31 @@ Roman;Le Rouge et le Noir;Stendhal;1830;yes
 
 ### 1) Classe `Book`
 
-Représente un livre.
+Représente un livre (exemple à adapter)
 
 * Attributs : `title`, `author`, `year`, `available`
 * Valider les données dans le constructeur (ex : année numérique)
 
 ### 2) Classe `Category`
 
-Contient un ensemble de livres.
-
-* Reçoit une **liste de livres**
-* Méthodes :
-
-  * `available_books()` → renvoie les livres non empruntés
-  * `borrow(title)` → met `available = False` ou lève une exception
-  * `return_book(book)` → remet `available = True`
+Contient un ensemble de livres, à vous de définir les attributs/comportements de cet entité.
 
 ### 3) Classe `Library`
 
-Coordonne toutes les catégories.
+Coordonne toutes les catégories, à vous de définir les attributs et méthodes de la classe, ci-dessous on vous donne un exemple de méthodes à implémenter, complèter si nécessaire.
 
 * Reçoit une **liste de catégories**
+
 * Méthodes :
 
   * `borrow_book(category_name, title)`
   * `return_book(category_name, book)`
   * `total_available()` → somme des livres disponibles
+  ...
 
 ### 4) Partie principale (`main`)
 
-* Charger les données depuis `books.csv`
+* Charger les données depuis `book.csv`
 * Nettoyer les lignes
 * Construire :
 
@@ -125,7 +120,7 @@ Coordonne toutes les catégories.
 
 | Critère                                             | Points |
 | --------------------------------------------------- | :----: |
-| Lecture et nettoyage du fichier `books.csv`         |    3   |
+| Lecture et nettoyage du fichier `book .csv`         |    3   |
 | Conception correcte de la classe `Book`             |    2   |
 | Conception correcte de la classe `Category`         |    3   |
 | Conception correcte de la classe `Library`          |    3   |
