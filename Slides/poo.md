@@ -319,14 +319,6 @@ Bob (b@ex.com) : ['read', 'approve']
 
 ---
 
-### **Exercice – Héritage avec `super()`**
-
-> Créez deux classes :
-> `Vehicle` : contient un attribut `brand` et une méthode `describe()` qui affiche `"Vehicle brand: Renault"`.
-> `Car` : hérite de `Vehicle`, ajoute un attribut `model`, et redéfinit `describe()` en appelant `super().describe()` puis en affichant aussi le modèle.
-
----
-
 ### Exercice – Produits, Livres et Panier (POO)
 
 Créer une classe `Product` avec `name` et `price_ht`, ainsi qu'un attribut de classe `VAT` (ex. 0.20). La méthode `price_ttc()` calcule le prix TTC.
