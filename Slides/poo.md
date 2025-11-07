@@ -321,13 +321,13 @@ Bob (b@ex.com) : ['read', 'approve']
 
 ### Exercice – Produits, Livres et Panier (POO)
 
-Créer une classe `Product` avec `name` et `price_ht`, ainsi qu'un attribut de classe `VAT` (ex. 0.20). La méthode `price_ttc()` calcule le prix TTC.
+Créer une classe `Product` avec `name` et `price_ht`, ainsi qu'un attribut de classe `TVA` (ex. 0.20). La méthode `price_ttc()` calcule le prix TTC.
 
-Créer une classe `Book` qui hérite de `Product`, ajoute `author`, possède son propre taux de TVA (attribut de classe `VAT` différent) et redéfinit `price_ttc()`. Utiliser `super()` dans le constructeur.
+Créer une classe `Book` qui hérite de `Product`, ajoute `author`, possède son propre taux de TVA (attribut de classe `TVA` différent) et redéfinit `price_ttc()`. Utiliser `super()` dans le constructeur.
 
-Créer une classe `Cart` contenant une liste `items`. Elle doit permettre `buy(product)`, `restore(product)`, `reset()` et `total()` qui renvoie le total TTC du panier. Le panier ne doit pas créer de produits, seulement recevoir ceux créés à l'extérieur.
+Créer une classe `Cart` contenant une liste `products` (un dictionnaire peut contenir vos produits). Elle doit permettre `buy(product)`, `restore(product)`, `reset()` et `total()` qui renvoie le total TTC du panier. Le panier ne doit pas créer de produits, seulement recevoir ceux créés à l'extérieur.
 
-Dans le programme principal : créer au moins deux `Product` et deux `Book`, les ajouter au panier, afficher le total, modifier les valeurs de `Product.VAT` ou `Book.VAT`, puis afficher à nouveau le total pour observer l'effet.
+Dans le programme principal : créer au moins deux `Product` et deux `Book`, les ajouter au panier, afficher le total, modifier les valeurs de `Product.TVA` ou `Book.TVA`, puis afficher à nouveau le total pour observer l'effet.
 
 
 ---
