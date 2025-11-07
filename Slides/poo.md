@@ -329,7 +329,6 @@ Créer une classe `Cart` contenant une liste `products` (un dictionnaire peut co
 
 Dans le programme principal : créer au moins deux `Product` et deux `Book`, les ajouter au panier, afficher le total, modifier les valeurs de `Product.TVA` ou `Book.TVA`, puis afficher à nouveau le total pour observer l'effet.
 
-
 ---
 
 ## **5. Encapsulation et cohérence interne**
